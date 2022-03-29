@@ -24,6 +24,6 @@ yarn-error.log*
 
 # firebase Emulator service and UI logs
 firebase-debug.log
-ui.debug.log
+ui-debug.log
 
 .firebaserc
