@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  padding: 1rem;
+  /* margin-bottom: 1.5rem; */
+  background-color: black;
+  color: white;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__logo {
+  height: 2rem;
+  aspect-ratio: 1;
+  border: 3px solid;
+  background-color: #666;
+  cursor: pointer;
+}
+
+.header__title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}

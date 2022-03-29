@@ -1,25 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { AuthRoute, Header } from 'components';
+import { HomePage } from 'pages/home/home';
+import {
+  AuthChangePassword,
+  AuthForgotPassword,
+  AuthResetPassword,
+  AuthLogin,
+  AuthLogout,
+  AuthRegister,
+  ProvideAuth,
+} from 'pages/auth';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProvideAuth>
+      <Header />
+      <div className='App center-wrap'>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <AuthRoute>
+                <HomePage />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path='/change'
+            element={
+              <AuthRoute>
+                <AuthChangePassword />
+              </AuthRoute>
+            }
+          />
+
+          <Route
+            path='/logout'
+            element={
+              <AuthRoute>
+                <AuthLogout />
+              </AuthRoute>
+            }
+          />
+          <Route path='/register' element={<AuthRegister />} />
+          <Route path='/login' element={<AuthLogin />} />
+          <Route path='/forgot' element={<AuthForgotPassword />} />
+          <Route path='/reset' element={<AuthResetPassword />} />
+        </Routes>
+      </div>
+    </ProvideAuth>
   );
 }
 
