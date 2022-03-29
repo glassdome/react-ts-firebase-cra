@@ -47,6 +47,7 @@ export const AuthChangePassword = () => {
     <AuthForm title='Change Password'>
       <div className='input-underline'>
         <input
+          autoComplete='current-password'
           type='password'
           name='oldPassword'
           id='oldPassword'
@@ -54,11 +55,12 @@ export const AuthChangePassword = () => {
           value={oldPassword}
           className='text-input'
           onChange={(e) => setOldPassword(e.target.value)}
+          required
         />
       </div>
       <div className='input-underline'>
         <input
-          autoComplete='off'
+          autoComplete='new-password'
           type='password'
           name='password'
           id='password'
@@ -66,11 +68,12 @@ export const AuthChangePassword = () => {
           value={newPassword}
           className='text-input'
           onChange={(e) => setNewPassword(e.target.value)}
+          required
         />
       </div>
       <div className='input-underline'>
         <input
-          autoComplete='off'
+          autoComplete='new-password'
           type='password'
           name='confirm'
           id='confirm'
@@ -78,6 +81,7 @@ export const AuthChangePassword = () => {
           value={confirm}
           className='text-input'
           onChange={(e) => setConfirm(e.target.value)}
+          required
         />
       </div>
       <button

@@ -86,7 +86,7 @@ export const AuthLogin = () => {
       </p>
       <div className='input-underline'>
         <input
-          autoComplete='new-password'
+          autoComplete='email'
           type='email'
           name='email'
           id='email'
@@ -94,11 +94,12 @@ export const AuthLogin = () => {
           value={email}
           className='text-input'
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
       </div>
       <div className='input-underline'>
         <input
-          autoComplete='off'
+          autoComplete='current-password'
           type='password'
           name='password'
           id='password'
@@ -106,6 +107,7 @@ export const AuthLogin = () => {
           value={password}
           className='text-input'
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
       </div>
       <button

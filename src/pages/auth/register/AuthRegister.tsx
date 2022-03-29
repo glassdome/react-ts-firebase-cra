@@ -43,6 +43,7 @@ export const AuthRegister = () => {
           value={email}
           className='text-input'
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
       </div>
       <div className='input-underline'>
@@ -55,6 +56,7 @@ export const AuthRegister = () => {
           value={password}
           className='text-input'
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
       </div>
       <div className='input-underline'>
@@ -67,6 +69,7 @@ export const AuthRegister = () => {
           value={confirm}
           className='text-input'
           onChange={(e) => setConfirm(e.target.value)}
+          required
         />
       </div>
       <button

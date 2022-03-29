@@ -16,10 +16,6 @@ const withAuthEmulator = (): boolean => {
   return e !== undefined && e === 'true';
 };
 
-console.log(`USE_EMULATOR : ${process.env.REACT_APP_USE_EMULATOR}`);
-console.log(`NOT_EXIST : ${process.env.REACT_APP_NOT_EXIST}`);
-console.log(`PROCES_NAME: ${process.env.PROJECT_NAME}`);
-
 if (withAuthEmulator()) {
   connectAuthEmulator(auth, 'http://localhost:9099');
 }
